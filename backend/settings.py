@@ -26,6 +26,16 @@ SECRET_KEY = 'django-insecure-w&-27xrg7boh_m-0kjj1mrdn5)b&cbwg_d&6nkt#@2#e%x6&8%
 DEBUG = True
 
 ALLOWED_HOSTS = ["loan-backend-39yp.onrender.com", "localhost", "127.0.0.1"]
+CORS_ALLOWED_ORIGINS = [
+    "https://loan-front-aqno.onrender.com",
+    "https://loanfront.netlify.app/"
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://loan-front-aqno.onrender.com",
+    "https://loanfront.netlify.app/"
+]
 
 
 
@@ -53,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+
 
 ROOT_URLCONF = 'backend.urls'
 
